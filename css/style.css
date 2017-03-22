@@ -105,13 +105,8 @@
   color: #fff;
   font-weight: bold;
 }
-.transbox img:hover{
-  background: rgb(65,196,231);
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-}
-.gallary_item img:hover {
-  background: rgb(65,196,231);
+.transbox img:hover {
+  background: rgba(65,196,231, 0.5);
 }
 .gallery_item h4 {
   font-size: 15px;
