@@ -67,6 +67,10 @@
   font-size: 14px;
   text-decoration: none;
 }
+#slide img {
+  width: 100%;
+}
+
 /*##############CSS BODY SECTION ##############*/
 /*gallary*/
 .gallary {
