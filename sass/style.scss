@@ -169,14 +169,15 @@
   padding: 12px 0;
 }
 .gallery_item {
-  padding: 0 8px;
+  margin: 0 8px;
   float: left;
   width: 292px;
   height: 281px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  -moz-box-shadow: 0px 4px 7px -5px rgba(0, 0, 0, 0.85);
-  box-shadow: 0px 4px 7px -5px rgba(0, 0, 0, 0.85);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(227, 227, 227, 1);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(227, 227, 227, 1);
+  box-shadow: 0px 1px 4px 0px rgba(227, 227, 227, 1);
   h4 {
     font-size: 15px;
     padding: 16px 17px 8px;
