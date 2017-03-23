@@ -11,7 +11,8 @@
     blue_skin: #344c8a,
     red: #f00,
     tiw: #469ae9,
-    gren_email: #0ec0ee
+    gren_email: #0ec0ee,
+    came: #fa4700
     );
 
 // @font-face {
@@ -98,7 +99,12 @@
     font-size: 14px;
     text-decoration: none;
     font-family: "Myriad Pro";
+    &:hover {
+    border-bottom: 2px solid #ffa800;
+    padding-bottom: 20px;
   }
+  }
+
 }
 /*##############CSS BODY SECTION ##############*/
 /*gallary*/

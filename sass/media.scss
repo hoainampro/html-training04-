@@ -1,0 +1,28 @@
+@media screen and (max-width:480px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    .tour {
+    padding: 35px 66px 26px;
+    text-transform: uppercase;
+    font-size: 50px;
+  }
+}
+  .background-1 {
+    float: none;
+  }
+  .background-2 {
+    float: none;
+  }
+  .background-3 {
+    float: none;
+  }
+
+}
+
+@media screen and (max-width: 780px){
+  .gallery_item {
+    width: 47.9999%;
+    margin: 6px 4px 235px;
+  }
+}

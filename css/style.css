@@ -72,6 +72,9 @@
     font-size: 14px;
     text-decoration: none;
     font-family: "Myriad Pro"; }
+    .menu_item a:hover {
+      border-bottom: 2px solid #ffa800;
+      padding-bottom: 20px; }
 
 /*##############CSS BODY SECTION ##############*/
 /*gallary*/
