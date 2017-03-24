@@ -97,8 +97,8 @@
     text-decoration: none;
     font-family: "Myriad Pro";
     &:hover {
-    border-bottom: 2px solid #ffa800;
-    padding-bottom: 24px;
+    border-bottom: 3px solid #ffa800;
+    padding-bottom: 23px;
   }
   }
 
@@ -145,7 +145,13 @@
   height: 123px;
   margin-left: -54px;
   cursor: pointer;
-
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: linear;
   h3 {
     position: absolute;
     left: 0;
@@ -167,7 +173,7 @@
   padding: 12px 0;
 }
 .gallery_item {
-  margin: 0 8px;
+  margin: 0 9px;
   float: left;
   width: 292px;
   height: 281px;
@@ -195,7 +201,17 @@
   img {
     width: 100%;
     height: auto;
-  }
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    &:hover {
+       width:292px;
+       height: 210px;
+       -webkit-filter: grayscale(100%);
+    }
+ }
 }
 /*##############CSS FOOTER##############*/
 .footer-border {
@@ -226,7 +242,6 @@
 }
 .infor {
   list-style: none;
-  padding: 0 10px;
   li a {
     text-decoration: none;
     font-size: 14px;
@@ -234,6 +249,9 @@
     line-height: 2.2;
     font-family: Arial;
     text-transform: capitalize;
+    &:hover {
+      color:map-get($color, green_skin);
+    }
   }
 }
 
@@ -246,10 +264,12 @@
   li a {
     text-decoration: none;
     color: #000;
-    padding: 0 10px;
     font-family: Arial;
     font-size: 14px;
     text-transform: capitalize;
+    &:hover {
+      color:map-get($color, green_skin);
+    }
   }
   [class*="fa fa-facebook"] {
     // @include social($color: #344c8a, $background-color: #fff);
