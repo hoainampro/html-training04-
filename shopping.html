@@ -10,22 +10,21 @@
 <body>
   <div>
   <button type="button" class="add-to-cart" data-name="ha noi - phong nha" data-price="5000">add-to-cart</button>
-    
-  
   </div>
   <div>
     <table border="1" id="show-cart">
-            <tr>
-                <td>Name</td>
-                <td>Price</td>
-                <td>count</td>
-            </tr>
-    </table> 
+      <tr style="color:red">
+        <th>Name</th>
+        <th>Price</th>
+        <th>count</th>
+        <th id="total-cart">Total</th>
+      </tr>
+    </table>
     <div>
       <span id="total-cart">Total: </span>
     </div>
     <div>
-    <button type="button" id="clear-cart">clear</button>  
+    <button type="button" id="clear-cart">clear</button>
     </div>
   </div>
 
@@ -36,28 +35,27 @@
     var name = $(this).attr("data-name");
     var price = Number($(this).attr("data-price"));
     AddItemToCart(name, price, 1);
-    displayCart(); 
+    displayCart();
   });
 
   $("#clear-cart").click(function(event) {
     clearCart();
-    displayCart(); 
+    displayCart();
   });
 
   function displayCart() {
     var cartArray = listCart();
     var output = "";
-    for(var i in cartArray) { 
-        output += "<table>";
+    for(var i in cartArray) {
+        output += "<tr><th>Name</th><th>Price</th><th>count</th><th>total</th><tr>";
         output += "<tr>";
-        output += "<td>" +"Ten san pham: "+ cartArray[i].name + "</td>";
-        output += "<td>" +"Gia san pham: "+ cartArray[i].price + "</td>";
-        output += "<td>" +"so luong: "+ cartArray[i].count + "</td>";
+        output += "<td>"+ cartArray[i].name + "</td>";
+        output += "<td>"+ cartArray[i].price + "</td>";
+        output += "<td>"+ cartArray[i].count + "</td>";
+        output += "<td>"+ cart[i].price * cart[i].count;+ "</td>";
         output += "</tr>";
-        output += "</table>"
     }
     $("#show-cart").html(output);
-    $("#total-cart").html(totalCart);
   }
 
     //shopping cart function
@@ -90,7 +88,7 @@
         if(cart[i].name === name){
            cart[i].count --;
         if(cart[i].count === 0){
-          cart.splice(i,1);   
+          cart.splice(i,1);
         }
         break;
         }
@@ -101,7 +99,7 @@
     function removeItemFromCartAll(name) {
       for (var i in cart) {
         if(cart[i].name === name) {
-        cart.splice(i,1); 
+        cart.splice(i,1);
         }
         break;
       }
@@ -122,13 +120,13 @@
     }
 
     //totalCart
-    function totalCart(){
-      var totalCost = 0;
-      for (var i in cart) {
-        totalCost += cart[i].price * cart[i].count;  
-      }
-      return totalCost;
-    }
+    // function totalCart(){
+    //   var totalCost = 0;
+    //   for (var i in cart) {
+    //     totalCost += cart[i].price * cart[i].count;
+    //   }
+    //   return totalCost;
+    // }
 
     //listCart
     function listCart() {
@@ -149,11 +147,11 @@
       localStorage.setItem("shoppingCart", JSON.stringify(cart));
     }
     //loadCart
-    
+
     function loadCart() {
       cart = JSON.parse(localStorage.setItem("shoppingCart"));
     }
-    
+
   </script>
 </body>
 </html>

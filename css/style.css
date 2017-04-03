@@ -181,7 +181,7 @@
     .gallery_item img:hover {
       width: 292px;
       height: 210px;
-      -webkit-filter: grayscale(100%); }
+      transform: scale(50%); }
 
 /*##############CSS FOOTER##############*/
 .footer-border {
